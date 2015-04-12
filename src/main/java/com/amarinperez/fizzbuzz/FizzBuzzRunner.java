@@ -2,16 +2,16 @@ package com.amarinperez.fizzbuzz;
 
 public class FizzBuzzRunner {
 
-	public String run(int first, int last) {
+	public FizzBuzzSequence run(int first, int last) {
 		if (first > last)
 			throw new IllegalArgumentException("Invalid range, first can't be higher than last.");
 
 		FizzBuzz fizzbuzz = new FizzBuzz();
-		StringBuilder builder = new StringBuilder();
+		FizzBuzzSequence sequence = new FizzBuzzSequence();
 		
 		for(int i = first; i <= last; i++)
-			builder.append(fizzbuzz.get(i)).append(" ");
+			sequence.add(fizzbuzz.get(i));
 		
-		return builder.toString().trim();
+		return sequence;
 	}
 }

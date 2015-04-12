@@ -22,7 +22,7 @@ public class App {
 		int first = Integer.parseInt(args[0]);
 		int last = Integer.parseInt(args[1]);
 		FizzBuzzRunner runner = new FizzBuzzRunner();
-		String result = runner.run(first, last);
+		String result = runner.run(first, last).toString();
 
 		print(result);
 	}
