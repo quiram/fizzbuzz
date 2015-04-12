@@ -6,13 +6,13 @@ import org.junit.Test;
 
 public class FizzBuzzPrintFizzTest extends FizzBuzzTestBase {
 	@Test
-	public void getFizzOnThree() {
-		assertFizzOn(3);
+	public void getFizzOnSix() {
+		assertFizzOn(6);
 	}
 
 	@Test
-	public void getFizzOnSix() {
-		assertFizzOn(6);
+	public void getFizzOnNine() {
+		assertFizzOn(9);
 	}
 
 	private void assertFizzOn(int i) {

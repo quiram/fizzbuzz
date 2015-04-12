@@ -11,8 +11,8 @@ public class FizzBuzzPrintFizzBuzzTest extends FizzBuzzTestBase {
 	}
 
 	@Test
-	public void getFizzbuzzOnThirty() {
-		assertFizzBuzzOn(30);
+	public void getFizzbuzzOnFortyfive() {
+		assertFizzBuzzOn(45);
 	}
 
 	private void assertFizzBuzzOn(int i) {

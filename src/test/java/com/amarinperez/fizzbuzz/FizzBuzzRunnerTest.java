@@ -39,7 +39,7 @@ public class FizzBuzzRunnerTest {
 	public void elementsIncludingFizz()
 	{
 		FizzBuzzRunner runner = new FizzBuzzRunner();
-		String result = runner.run(1, 3);
-		assertEquals("1 2 fizz", result);
+		String result = runner.run(3, 6);
+		assertEquals("lucky 4 buzz fizz", result);
 	}
 }

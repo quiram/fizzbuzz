@@ -18,5 +18,4 @@ public class FizzBuzzPrintBuzzTest extends FizzBuzzTestBase {
 	private void assertBuzzOn(int i) {
 		assertEquals("buzz", fizzbuzz.get(i));
 	}
-
 }
