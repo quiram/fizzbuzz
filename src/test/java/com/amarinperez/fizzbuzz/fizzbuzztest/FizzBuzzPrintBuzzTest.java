@@ -1,4 +1,4 @@
-package com.amarinperez.fizzbuzz;
+package com.amarinperez.fizzbuzz.fizzbuzztest;
 
 import static org.junit.Assert.assertEquals;
 

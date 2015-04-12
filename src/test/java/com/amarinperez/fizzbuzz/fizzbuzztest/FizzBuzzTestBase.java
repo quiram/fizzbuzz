@@ -1,6 +1,8 @@
-package com.amarinperez.fizzbuzz;
+package com.amarinperez.fizzbuzz.fizzbuzztest;
 
 import org.junit.Before;
+
+import com.amarinperez.fizzbuzz.FizzBuzz;
 
 public class FizzBuzzTestBase {
 

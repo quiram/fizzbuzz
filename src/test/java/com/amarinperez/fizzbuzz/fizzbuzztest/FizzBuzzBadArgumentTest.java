@@ -1,4 +1,4 @@
-package com.amarinperez.fizzbuzz;
+package com.amarinperez.fizzbuzz.fizzbuzztest;
 
 import static org.hamcrest.Matchers.containsString;
 
@@ -6,6 +6,8 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import com.amarinperez.fizzbuzz.FizzBuzz;
 
 public class FizzBuzzBadArgumentTest {
 
