@@ -8,6 +8,7 @@ public class App {
 	public static void main(String[] args) {
 		if (args.length != 2) {
 			printUsage();
+			System.exit(0);
 		}
 
 		try {
@@ -21,10 +22,14 @@ public class App {
 	private static void runProgram(String[] args) {
 		int first = Integer.parseInt(args[0]);
 		int last = Integer.parseInt(args[1]);
+
 		FizzBuzzRunner runner = new FizzBuzzRunner();
-		String result = runner.run(first, last).toString();
+		FizzBuzzSequence fizzbuzzSequence = runner.run(first, last);
+		String result = fizzbuzzSequence.toString();
+		String report = fizzbuzzSequence.getFullReport();
 
 		print(result);
+		print(report);
 	}
 
 	private static void printError(Exception e) {
