@@ -15,19 +15,18 @@ public class FizzBuzz {
 			return LUCKY;
 		}
 
-		String result = "";
+		if (i % 15 == 0) {
+			return FIZZ + BUZZ;
+		}
 
 		if (i % 3 == 0) {
-			result = FIZZ;
+			return FIZZ;
 		}
 		if (i % 5 == 0) {
-			result += BUZZ;
-		}
-		if (result.equals("")) {
-			result = Integer.toString(i);
+			return BUZZ;
 		}
 
-		return result;
+		return Integer.toString(i);
 	}
 
 	private boolean numberContainsThree(int i) {
