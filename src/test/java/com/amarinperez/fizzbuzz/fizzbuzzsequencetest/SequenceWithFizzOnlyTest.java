@@ -2,18 +2,32 @@ package com.amarinperez.fizzbuzz.fizzbuzzsequencetest;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
 
-import com.amarinperez.fizzbuzz.FizzBuzzSequence;
-
-public class SequenceWithFizzOnlyTest {
-	private FizzBuzzSequence sequence;
-
-	@Before
-	public void setup() {
-		sequence = new FizzBuzzSequence();
+public class SequenceWithFizzOnlyTest extends FizzBuzzSequenceTestBase {
+	@Override
+	protected void fillSequence() {
 		sequence.add("fizz");
+	}
+
+	@Override
+	protected int getExpectedFizzCount() {
+		return 1;
+	}
+
+	@Override
+	protected int getExpectedBuzzCount() {
+		return 0;
+	}
+
+	@Override
+	protected int getExpectedFizzBuzzCount() {
+		return 0;
+	}
+
+	@Override
+	protected int getExpectedLuckyCount() {
+		return 0;
 	}
 
 	@Test

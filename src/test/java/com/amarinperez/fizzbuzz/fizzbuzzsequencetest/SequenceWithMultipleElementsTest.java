@@ -4,26 +4,26 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class EmptySequenceTest extends FizzBuzzSequenceTestBase {
+public class SequenceWithMultipleElementsTest extends FizzBuzzSequenceTestBase {
 
 	@Override
 	protected void fillSequence() {
-		// Nothing to fill
+		sequence.add("fizz").add("7").add("fizz").add("buzz").add("fizzbuzz");
 	}
 
 	@Override
 	protected int getExpectedFizzCount() {
-		return 0;
+		return 2;
 	}
 
 	@Override
 	protected int getExpectedBuzzCount() {
-		return 0;
+		return 1;
 	}
 
 	@Override
 	protected int getExpectedFizzBuzzCount() {
-		return 0;
+		return 1;
 	}
 
 	@Override
@@ -32,12 +32,12 @@ public class EmptySequenceTest extends FizzBuzzSequenceTestBase {
 	}
 
 	@Test
-	public void providesEmptyString() {
-		assertEquals("", sequence.toString());
+	public void providesExpectedElementsAsString() {
+		assertEquals("fizz 7 fizz buzz fizzbuzz", sequence.toString());
 	}
 
 	@Test
-	public void containsNoFizz() {
-		assertEquals(0, sequence.getCountOf("fizz"));
+	public void hasOneInteger() {
+		assertEquals(1, sequence.getCountOfIntegers());
 	}
 }

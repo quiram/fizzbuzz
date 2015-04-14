@@ -1,6 +1,7 @@
 package com.amarinperez.fizzbuzz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FizzBuzzSequence {
@@ -32,5 +33,16 @@ public class FizzBuzzSequence {
 		catch (NumberFormatException e) {
 			return false;
 		}
+	}
+
+	public String getFullReport() {
+		List<String> keys = Arrays.asList(new String[] {"fizz", "buzz", "fizzbuzz", "lucky"});
+		List<String> reportLines = new ArrayList<String>();
+		
+		for (String key : keys) {
+			reportLines.add(key + ": " + getCountOf(key));
+		}
+		
+		return String.join(System.lineSeparator(), reportLines.toArray(new String[0]));
 	}
 }
