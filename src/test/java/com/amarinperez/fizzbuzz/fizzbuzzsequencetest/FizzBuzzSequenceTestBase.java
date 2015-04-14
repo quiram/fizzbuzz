@@ -21,33 +21,34 @@ public abstract class FizzBuzzSequenceTestBase {
 	}
 
 	protected abstract void fillSequence();
-	protected abstract int getExpectedFizzCount();
-	protected abstract int getExpectedBuzzCount();
-	protected abstract int getExpectedFizzBuzzCount();
-	protected abstract int getExpectedLuckyCount();
+	protected abstract int getExpectedCountOf(String key);
 	
 	@Test
 	public void expectedFizzReport()
 	{
-		assertThat(report, containsString("fizz: " + getExpectedFizzCount()));
+		assertReportContainsLineFor("fizz");
 	}
-	
+
 	@Test
 	public void expectedBuzzReport()
 	{
-		assertThat(report, containsString("buzz: " + getExpectedBuzzCount()));
+		assertReportContainsLineFor("buzz");
 	}
 	
 	@Test
 	public void expectedFizzBuzzReport()
 	{
-		assertThat(report, containsString("fizzbuzz: " + getExpectedFizzBuzzCount()));
+		assertReportContainsLineFor("fizzbuzz");
 		
 	}
 	
 	@Test
 	public void expectedLuckyReport()
 	{
-		assertThat(report, containsString("lucky: " + getExpectedLuckyCount()));
+		assertReportContainsLineFor("lucky");
+	}
+
+	protected void assertReportContainsLineFor(String key) {
+		assertThat(report, containsString(key + ": " + getExpectedCountOf(key)));
 	}
 }

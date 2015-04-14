@@ -12,23 +12,17 @@ public class SequenceWithMultipleElementsTest extends FizzBuzzSequenceTestBase {
 	}
 
 	@Override
-	protected int getExpectedFizzCount() {
-		return 2;
-	}
-
-	@Override
-	protected int getExpectedBuzzCount() {
-		return 1;
-	}
-
-	@Override
-	protected int getExpectedFizzBuzzCount() {
-		return 1;
-	}
-
-	@Override
-	protected int getExpectedLuckyCount() {
-		return 0;
+	protected int getExpectedCountOf(String key) {
+		switch(key){
+			case "fizz":
+				return 2;
+			case "buzz":
+				return 1;
+			case "fizzbuzz":
+				return 1;
+			default:
+				return 0;
+		}
 	}
 
 	@Test

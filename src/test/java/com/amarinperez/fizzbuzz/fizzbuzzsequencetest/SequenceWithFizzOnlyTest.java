@@ -11,46 +11,31 @@ public class SequenceWithFizzOnlyTest extends FizzBuzzSequenceTestBase {
 	}
 
 	@Override
-	protected int getExpectedFizzCount() {
-		return 1;
-	}
-
-	@Override
-	protected int getExpectedBuzzCount() {
-		return 0;
-	}
-
-	@Override
-	protected int getExpectedFizzBuzzCount() {
-		return 0;
-	}
-
-	@Override
-	protected int getExpectedLuckyCount() {
-		return 0;
+	protected int getExpectedCountOf(String key) {
+		if (key.equals("fizz")) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 
 	@Test
-	public void producesFizzAsString()
-	{
+	public void producesFizzAsString() {
 		assertEquals("fizz", sequence.toString());
 	}
-	
+
 	@Test
-	public void hasOneFizzItem()
-	{
+	public void hasOneFizzItem() {
 		assertEquals(1, sequence.getCountOf("fizz"));
 	}
 
 	@Test
-	public void hasNoBuzzItems()
-	{
+	public void hasNoBuzzItems() {
 		assertEquals(0, sequence.getCountOf("buzz"));
 	}
-	
+
 	@Test
-	public void hasNoIntegers()
-	{
+	public void hasNoIntegers() {
 		assertEquals(0, sequence.getCountOfIntegers());
 	}
 }

@@ -12,22 +12,7 @@ public class EmptySequenceTest extends FizzBuzzSequenceTestBase {
 	}
 
 	@Override
-	protected int getExpectedFizzCount() {
-		return 0;
-	}
-
-	@Override
-	protected int getExpectedBuzzCount() {
-		return 0;
-	}
-
-	@Override
-	protected int getExpectedFizzBuzzCount() {
-		return 0;
-	}
-
-	@Override
-	protected int getExpectedLuckyCount() {
+	protected int getExpectedCountOf(String key) {
 		return 0;
 	}
 
