@@ -43,6 +43,8 @@ public class FizzBuzzSequence {
 			reportLines.add(key + ": " + getCountOf(key));
 		}
 		
+		reportLines.add("integer: " + getCountOfIntegers());
+		
 		return String.join(System.lineSeparator(), reportLines.toArray(new String[0]));
 	}
 }

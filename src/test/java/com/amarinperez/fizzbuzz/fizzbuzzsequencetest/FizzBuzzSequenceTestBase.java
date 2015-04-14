@@ -47,6 +47,12 @@ public abstract class FizzBuzzSequenceTestBase {
 	{
 		assertReportContainsLineFor("lucky");
 	}
+	
+	@Test
+	public void expectedIntegerReport()
+	{
+		assertReportContainsLineFor("integer");
+	}
 
 	protected void assertReportContainsLineFor(String key) {
 		assertThat(report, containsString(key + ": " + getExpectedCountOf(key)));

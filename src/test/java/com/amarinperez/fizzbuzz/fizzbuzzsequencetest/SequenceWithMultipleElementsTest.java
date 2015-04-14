@@ -20,6 +20,8 @@ public class SequenceWithMultipleElementsTest extends FizzBuzzSequenceTestBase {
 				return 1;
 			case "fizzbuzz":
 				return 1;
+			case "integer":
+				return 1;
 			default:
 				return 0;
 		}
